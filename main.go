@@ -32,7 +32,7 @@ func render(data [][]string) int {
 
 func goMain(args []string) int {
 	data := [][]string{}
-	for _, arg := range args {
+	for _, arg := range args[1:] {
 		data = append(data, performEach(arg))
 	}
 	return render(data)
